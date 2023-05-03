@@ -64,32 +64,32 @@ if (isset($_POST["cari"])) {
                     <table border="1" width="100%" cellpadding="5" cellspacing="0">
                         <thead>
                             <tr>
-                                <td>No.</td>
-                                <td>Mengubah Data</td>
-                                <td> Menghapus Data</td>
+                               <td>No.</td>
                                 <td>NIK</td>
                                 <td>Nama</td>
                                 <td>Jenis Kelamin</td>
                                 <td>Nomor Rumah</td>
                                 <td>Jenis Surat</td>
                                 <td>Nomor Surat</td>
+                                <td>Mengubah Data</td>
+                                <td> Menghapus Data</td>
                             </tr>
                             <?php $no = 1; ?>
                             <?php
                             foreach ($input_data_surat as $row) :
                             ?>
                                 <tr>
-                                    <td> <?= $no; ?> </td>
-                                    <td>
-                                        <center> <a class="text-ubahdata"href="ubah.php?id=<?= $row["id"]; ?> "> ubah </a> </center>
-                                    <td>
-                                        <center> <a class="text-hapusdata" href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('Hapus Data ?')"> hapus </a> </center>
+                                    <td> <?= $no; ?> </td>       
                                     <td> <?= $row["nik"]; ?> </td>
                                     <td> <?= $row["nama"]; ?> </td>
                                     <td> <?= $row["jk"]; ?> </td>
                                     <td> <?= $row["no_rumah"]; ?> </td>
                                     <td> <?= $row["jenis_surat"]; ?> </td>
                                     <td> <?= $row["no_surat"]; ?> </td>
+                                      <td>
+                                        <center> <a class="text-ubahdata"href="ubah.php?id=<?= $row["id"]; ?> "> ubah </a> </center>
+                                    <td>
+                                        <center> <a class="text-hapusdata" href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('Hapus Data ?')"> hapus </a> </center>
 
 
                                 </tr>
